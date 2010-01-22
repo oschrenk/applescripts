@@ -14,9 +14,9 @@ h3. Installation
 
 Copy the @.app@ somewhere (I keep it along side other scripts in @/Applications/Scripts@), then drag it onto the Finder toolbar.
 
-h3. Icons
+h3. Icon
 
-The default icon has been replaced with an icon mathcing Snow Leopard also available in the original blog post.
+The default icon has been replaced with an icon matching Snow Leopard's style. It was available via the original blog post.
 
 h2. OpenInTerminal.app
 
@@ -25,6 +25,10 @@ Toolbar script by "Marc Liyanage":http://www.entropy.ch
 h3. Installation
 
 Copy the .app somewhere (I keep it along side other scripts in @/Applications/Scripts@), then drag it onto the Finder toolbar.
+
+h3. Icons
+
+The default icon has been replaced with an icon matching Snow Leopard's style, original available "here":http://henrik.nyh.se/2007/10/open-terminal-here-and-glob-select-in-leopard-finder
 
 h2. Toogle Bluetooth (with Growl Support)
 
