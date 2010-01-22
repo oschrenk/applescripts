@@ -14,6 +14,10 @@ h3. Installation
 
 Copy the @.app@ somewhere (I keep it along side other scripts in @/Applications/Scripts@), then drag it onto the Finder toolbar.
 
+h3. Icons
+
+The default icon has been replaced with an icon mathcing Snow Leopard also available in the original blog post.
+
 h2. OpenInTerminal.app
 
 Toolbar script by "Marc Liyanage":http://www.entropy.ch
