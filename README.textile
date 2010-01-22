@@ -1,0 +1,29 @@
+h1. README
+
+h2. OpenInTextMate.app
+
+Toolbar script by "Henryk Nyh":http://henrik.nyh.se, based on work by "Simon Dorfman":http://snippets.dzone.com/posts/show/1037
+
+bq.. Clicking the toolbar icon now opens the selected file or files if there is a selection; otherwise it opens the current directory. You can also drag-and-drop files to the icon to open those.
+
+Behind the scenes, the script is all AppleScript, without dropping into the shell. Feels a bit more robust.
+
+A single TextMate window will open, containing all selected or dropped items in a project.
+
+h3. Installation
+
+Copy the @.app@ somewhere (I keep it along side other scripts in @/Applications/Scripts@), then drag it onto the Finder toolbar.
+
+h2. OpenInTerminal.app
+
+Toolbar script by "Marc Liyanage":http://www.entropy.ch
+
+h3. Installation
+
+Copy the .app somewhere (I keep it along side other scripts in @/Applications/Scripts@), then drag it onto the Finder toolbar.
+
+h2. Toogle Bluetooth (with Growl Support)
+
+An apple script for toggling Bluetooth on/off. Very useful in connection with Quicksilver.
+
+Orginal available "here":http://www.macosxhints.com/article.php?story=20070328181324855
