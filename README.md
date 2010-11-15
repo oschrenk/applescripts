@@ -35,3 +35,13 @@ The default icon has been replaced with an icon matching Snow Leopard's style, o
 An apple script for toggling Bluetooth on/off. Very useful in connection with Quicksilver.
 
 Orginal available [here](http://www.macosxhints.com/article.php?story=20070328181324855)
+
+## Lock Screen ##
+
+Locks the screen
+
+Found [here](http://www.macosxtips.co.uk/index_files/run-applescripts-with-keyboard-shortcuts.html)
+
+## Unmount local drives ##
+
+Unmounts the local drives. You don't get a message though and it takes a few seconds.
