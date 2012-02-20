@@ -4,7 +4,7 @@
 
 Toolbar script by [Henryk Nyh](http://henrik.nyh.se), based on work by [Simon Dorfman](http://snippets.dzone.com/posts/show/1037)
 
-> > Clicking the toolbar icon now opens the selected file or files if there is a selection; otherwise it opens the current directory. You can also drag-and-drop files to the icon to open those.
+> Clicking the toolbar icon now opens the selected file or files if there is a selection; otherwise it opens the current directory. You can also drag-and-drop files to the icon to open those.
 
 Behind the scenes, the script is all AppleScript, without dropping into the shell. Feels a bit more robust.
 
@@ -20,7 +20,11 @@ The default icon has been replaced with an icon matching Snow Leopard's style. I
 
 ## OpenInTerminal.app ##
 
-Toolbar script by [Marc Liyanage](http://www.entropy.ch)
+[Enhanced Open Terminal](http://maururu.net/2007/enhanced-open-terminal-here-for-leopard/)
+- ⌘ + Clicking opens a new tab in the frontmost Terminal instead of opening a new window
+- ⌥ + Clicking runs the cd command in the frontmost Terminal window if it is not busy. Otherwise it opens a new window/tab (depending on the state of ⌘)
+
+Based on original script by [Marc Liyanage](http://www.entropy.ch)
 
 ### Installation ###
 
