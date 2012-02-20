@@ -1,6 +1,8 @@
 # README #
 
-## Open In TextMate.app ##
+## Applications ##
+
+### Open In TextMate.app ###
 
 Toolbar script by [Henryk Nyh](http://henrik.nyh.se), based on work by [Simon Dorfman](http://snippets.dzone.com/posts/show/1037)
 
@@ -10,15 +12,15 @@ Behind the scenes, the script is all AppleScript, without dropping into the shel
 
 A single TextMate window will open, containing all selected or dropped items in a project.
 
-### Installation ###
+#### Installation ####
 
 Copy the `.app` somewhere (I keep it along side other scripts in `~/Library/Scripts`), then drag it onto the Finder toolbar.
 
-### Icon ###
+#### Icon ####
 
 The default icon has been replaced with an icon matching Snow Leopard's style. It was available via the original blog post.
 
-## Open In Terminal.app ##
+### Open In Terminal.app ###
 
 [Enhanced Open Terminal](http://maururu.net/2007/enhanced-open-terminal-here-for-leopard/)
 - ⌘ + Clicking opens a new tab in the frontmost Terminal instead of opening a new window
@@ -26,31 +28,33 @@ The default icon has been replaced with an icon matching Snow Leopard's style. I
 
 Based on original script by [Marc Liyanage](http://www.entropy.ch)
 
-### Installation ###
+#### Installation ####
 
 Copy the `.app` somewhere (I keep it along side other scripts in `/Applications/Scripts`), then drag it onto the Finder toolbar.
 
-## Toogle Bluetooth (with Growl Support) ##
+## Scripts ##
 
-An apple script for toggling Bluetooth on/off. Very useful in connection with Quicksilver.
+### Connect to VPN ###
 
-Orginal available [here](http://www.macosxhints.com/article.php?story=20070328181324855)
+A template for connecting to a VPN. 
 
-## Lock Screen ##
+You must edit the script according to the name of your VPN.
+
+### Empties the trash ###
+
+Does what it says.
+
+### Lock Screen ###
 
 Locks the screen
 
 Found [here](http://www.macosxtips.co.uk/index_files/run-applescripts-with-keyboard-shortcuts.html)
 
-## Unmount local drives ##
+### Open in Terminal ###
 
-Unmounts the local drives. You don't get a message though and it takes a few seconds.
+Opens the terminal on the current finder selection qith Quicksilver
 
-## Switch to VPN
-
-A template for connecting to a VPN.
-
-## Switch to User ##
+### Switch to User ###
 
 A template for fast user switching. 
 
@@ -58,3 +62,13 @@ A template for fast user switching.
 - You must first make a password item (a.k.a. a key) for the other user's password using Keychain Access, and call it `<username>`, where `username` is the other user's name and with the description `User Login`. The script assumes that you make this key in your `login.keychain`, which is the default one.
 - The first time you run this script, you will be prompted to allow Keychain Scripting to access the password of the key.
 - This script requires `Enable access for assistive devices` to be enabled in the Universal Access system preference pane.
+
+### Toogle Bluetooth (with Growl Support) ###
+
+An apple script for toggling Bluetooth on/off. Very useful in connection with Quicksilver.
+
+Orginal available [here](http://www.macosxhints.com/article.php?story=20070328181324855)
+
+### Unmount local drives ###
+
+Unmounts all local drives. You don't get a message though and it takes a few seconds.
