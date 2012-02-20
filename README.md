@@ -1,6 +1,6 @@
 # README #
 
-## OpenInTextMate.app ##
+## Open In TextMate.app ##
 
 Toolbar script by [Henryk Nyh](http://henrik.nyh.se), based on work by [Simon Dorfman](http://snippets.dzone.com/posts/show/1037)
 
@@ -18,7 +18,7 @@ Copy the `.app` somewhere (I keep it along side other scripts in `~/Library/Scri
 
 The default icon has been replaced with an icon matching Snow Leopard's style. It was available via the original blog post.
 
-## OpenInTerminal.app ##
+## Open In Terminal.app ##
 
 [Enhanced Open Terminal](http://maururu.net/2007/enhanced-open-terminal-here-for-leopard/)
 - ⌘ + Clicking opens a new tab in the frontmost Terminal instead of opening a new window
@@ -28,11 +28,7 @@ Based on original script by [Marc Liyanage](http://www.entropy.ch)
 
 ### Installation ###
 
-Copy the .app somewhere (I keep it along side other scripts in `/Applications/Scripts`), then drag it onto the Finder toolbar.
-
-### Icons ###
-
-The default icon has been replaced with an icon matching Snow Leopard's style, original available [here](http://henrik.nyh.se/2007/10/open-terminal-here-and-glob-select-in-leopard-finder)
+Copy the `.app` somewhere (I keep it along side other scripts in `/Applications/Scripts`), then drag it onto the Finder toolbar.
 
 ## Toogle Bluetooth (with Growl Support) ##
 
@@ -49,3 +45,16 @@ Found [here](http://www.macosxtips.co.uk/index_files/run-applescripts-with-keybo
 ## Unmount local drives ##
 
 Unmounts the local drives. You don't get a message though and it takes a few seconds.
+
+## Switch to VPN
+
+A template for connecting to a VPN.
+
+## Switch to User ##
+
+A template for fast user switching. 
+
+- This script **MUST** be named `Switch to <User>.scpt`, where `<User>` is the name of the user to switch to.
+- You must first make a password item (a.k.a. a key) for the other user's password using Keychain Access, and call it `<username>`, where `username` is the other user's name and with the description `User Login`. The script assumes that you make this key in your `login.keychain`, which is the default one.
+- The first time you run this script, you will be prompted to allow Keychain Scripting to access the password of the key.
+- This script requires `Enable access for assistive devices` to be enabled in the Universal Access system preference pane.
