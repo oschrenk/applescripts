@@ -36,9 +36,7 @@ Copy the `.app` somewhere (I keep it along side other scripts in `/Applications/
 
 ### Connect to VPN ###
 
-A template for connecting to a VPN. 
-
-You must edit the script according to the name of your VPN.
+A template for connecting to a VPN. Rename the script to `Connect to <vpn-service>.scpt`, where `<vpn-service>` is the name of the VPN Connection defined in the network preferences.
 
 ### Empties the trash ###
 
