@@ -19,6 +19,9 @@ Installs the following scripts
 
 ## Applications ##
 
+This repository also contains some `.app`s for the Finder Toolbar. But as the
+icons are not Retina ready they aren't installed by default.
+
 ### Open In TextMate.app ###
 
 Toolbar script by [Henryk Nyh](http://henrik.nyh.se), based on work by [Simon Dorfman](http://snippets.dzone.com/posts/show/1037)
@@ -48,3 +51,16 @@ Based on original script by [Marc Liyanage](http://www.entropy.ch)
 #### Installation ####
 
 Copy the `.app` somewhere (I keep it along side other scripts in `/Applications/Scripts`), then drag it onto the Finder toolbar.
+
+## Problems ##
+
+### Expected end of line, etc. but found “"”. (-2741) ###
+
+When invoking `make`
+
+	scripts/Eject Disks.applescript:17: error: Expected end of line, etc. but found “"”. (-2741)
+	make: *** [eject_disk] Error 1
+
+Open the script in AppleScript-Editor and a winow will pop up searching for
+`GrowlHelperApp`. This application isn't listed, so click `Search...`, 
+press `Cmd + G` and enter `/Library/PreferencePanes/Growl.prefPane/Contents/Resources` and choose `GrowlHelperApp.app`. You won't find the file via Search neither can you navigate in the Dialog.
