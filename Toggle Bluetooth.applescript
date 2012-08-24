@@ -1,16 +1,17 @@
-property blueutilPath : "/usr/local/bin/blueutil"
+property blueutilPath : "/usr/local/bin/blueutil power"
 
-if execBlueutil("status") ends with "off" then
+if execBlueutil("") ends with "0" then
 	-- Toggle BT on
-	execBlueutil("on")
+	execBlueutil("1")
 	set btStatus to true
 else
 	-- Toggle BT off
-	execBlueutil("off")
+	execBlueutil("0")
 	set btStatus to false
 end if
 
 on execBlueutil(command)
+	
 	set res to do shell script blueutilPath & " " & command
 	if res contains "Error" then
 		display dialog res
