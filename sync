@@ -1,3 +1,0 @@
-#!/bin/sh
-
-rsync -arvz --cvs-exclude --exclude=.git --exclude=sync --exclude=.DS_Store ./ ~/Library/Scripts/

@@ -1,5 +1,22 @@
 # README #
 
+	git clone https://github.com/oschrenk/osxhelpers
+	cd osxhelpers
+	make
+	# copies the compiled scripts to ~/Library/Scripts/
+	make install
+
+Installs the following scripts
+
+- `Eject Disks`. Eject all mounted disks. 
+- `Empty Trash`. Empty the trash.
+- `Lock Screen`. Switch to login screen. Orginal script from [here](http://www.macosxtips.co.uk/index_files/run-applescripts-with-keyboard-shortcuts.html)
+- `Switch to User`. A Template for fast user switching. This just rocks with Quicksilver. `Makefile` will generate an appropiate script for each user account. To use it:
+	- Create a password item for the other user's password using Keychain Access, and call it `<username>`, where `<username>` is the other user's name and with the description `User Login`. The script assumes that you make this key in your `login.keychain`, which is the default one.
+	- The first time you run this script, you will be prompted to allow Keychain Scripting to access the password of the key.
+	- This script requires `Enable access for assistive devices` to be enabled in the Universal Access system preference pane.
+- `Toggle Bluetooth`. Toggles bluetooth power state. Depends on [blueutil](https://github.com/toy/blueutil/) (`brew install blueutil`). Orginal script from [here](http://www.macosxhints.com/article.php?story=20070328181324855)
+
 ## Applications ##
 
 ### Open In TextMate.app ###
@@ -31,42 +48,3 @@ Based on original script by [Marc Liyanage](http://www.entropy.ch)
 #### Installation ####
 
 Copy the `.app` somewhere (I keep it along side other scripts in `/Applications/Scripts`), then drag it onto the Finder toolbar.
-
-## Scripts ##
-
-### Connect to VPN ###
-
-A template for connecting to a VPN. Rename the script to `Connect to <vpn-service>.scpt`, where `<vpn-service>` is the name of the VPN Connection defined in the network preferences.
-
-### Empties the trash ###
-
-Does what it says.
-
-### Lock Screen ###
-
-Locks the screen
-
-Found [here](http://www.macosxtips.co.uk/index_files/run-applescripts-with-keyboard-shortcuts.html)
-
-### Open in Terminal ###
-
-Opens the terminal on the current finder selection qith Quicksilver
-
-### Switch to User ###
-
-A template for fast user switching. 
-
-- This script **MUST** be named `Switch to <User>.scpt`, where `<User>` is the name of the user to switch to.
-- You must first make a password item (a.k.a. a key) for the other user's password using Keychain Access, and call it `<username>`, where `username` is the other user's name and with the description `User Login`. The script assumes that you make this key in your `login.keychain`, which is the default one.
-- The first time you run this script, you will be prompted to allow Keychain Scripting to access the password of the key.
-- This script requires `Enable access for assistive devices` to be enabled in the Universal Access system preference pane.
-
-### Toogle Bluetooth (with Growl Support) ###
-
-An apple script for toggling Bluetooth on/off. Very useful in connection with Quicksilver.
-
-Orginal available [here](http://www.macosxhints.com/article.php?story=20070328181324855)
-
-### Unmount local drives ###
-
-Unmounts all local drives. You don't get a message though and it takes a few seconds.
