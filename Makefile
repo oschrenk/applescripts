@@ -10,9 +10,8 @@ empty_trash:
 	osacompile -o build/Empty\ Trash.scpt scripts/Empty\ Trash.applescript
 lock_screen:
 	osacompile -o build/Lock\ Screen.scpt scripts/Lock\ Screen.applescript
-USERS=$(shell dscl /Local/Default -list /Users UniqueID | awk '$$2 >= 500 { print $$1; }')
 switch_to_user:
-	for u in $(USERS) ; \
+	for u in $(shell dscl /Local/Default -list /Users UniqueID | awk '$$2 >= 500 { print $$1; }') ; \
 	do \
 		osacompile -o build/Switch\ to\ $$u.scpt scripts/Switch\ to\ User.applescript ; \
 	done
