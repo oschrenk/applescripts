@@ -14,14 +14,14 @@ do shell script "/System/Library/CoreServices/'Menu Extras'/User.menu/Contents/R
 tell application "System Events"
 	repeat
 		if (do shell script "stat -f %Su /dev/console") is username then exit repeat
-
+		
 		-- Get the password for the username
 		try
 			set pswd to (do shell script "security find-generic-password -g -s \"" & username & "\" -D \"User Login\" 2>&1 1>/dev/null | sed -e 's/password: \"//' -e 's/\"//'")
 		on error
 			exit repeat
 		end try
-
+		
 		if exists window 1 of application process "SecurityAgent" then
 			tell process "SecurityAgent" to set value of text field 1 of window 1 to pswd
 			key code 36
@@ -29,7 +29,6 @@ tell application "System Events"
 		else
 			tell application "SecurityAgent" to quit
 			do shell script "/System/Library/CoreServices/'Menu Extras'/User.menu/Contents/Resources/CGSession -switchToUserID `id -ur " & username & "`"
-			exit repeat
 		end if
 	end repeat
 end tell
