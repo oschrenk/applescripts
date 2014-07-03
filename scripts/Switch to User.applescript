@@ -29,6 +29,7 @@ tell application "System Events"
 		else
 			tell application "SecurityAgent" to quit
 			do shell script "/System/Library/CoreServices/'Menu Extras'/User.menu/Contents/Resources/CGSession -switchToUserID `id -ur " & username & "`"
+			exit repeat
 		end if
 	end repeat
 end tell
