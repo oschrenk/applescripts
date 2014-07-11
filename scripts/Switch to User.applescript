@@ -14,15 +14,19 @@ do shell script "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/R
 repeat
     try
         tell application "System Events"
-            repeat until visible of process "SecurityAgent" is false
-                set visible of process "SecurityAgent" to false
+            delay 0.5
+            repeat until exists process "SecurityAgent"
+                delay 0.5
             end repeat
-            tell process "SecurityAgent" to set value of text field 1 of window 1 to pswd
--           key code 36
+            tell process "SecurityAgent"
+                set value of text field 1 of window 1 to user_password
+                key code 36
+            end tell
         end tell
         exit repeat
     on error
         tell application "System Events"
+            exit
         end tell
     end try
 end repeat
