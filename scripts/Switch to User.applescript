@@ -5,33 +5,27 @@
 --The first time you run this script, you will be prompted to allow Keychain Scripting to access the password of the key.
 --This script requires "Enable access for assistive devices" to be enabled in the Universal Access system preference pane.
 
-set username to word -1 of my findReplace(".scpt", "", (path to me as text))
-
--- Invoke Fast User Switching. The `id -ur username` part gets the uid number that corresponds to the username and substitutes it at the end of the CGSession command
-do shell script "/System/Library/CoreServices/'Menu Extras'/User.menu/Contents/Resources/CGSession -switchToUserID `id -ur " & username & "`"
+set user_name     to word -1 of my findReplace(".scpt", "", (path to me as text))
+set user_id       to do shell script "/usr/bin/id -u " & user_name
+set user_password to (do shell script "security find-generic-password -g -s \"" & user_name & "\" -D \"User Login\" 2>&1 1>/dev/null | sed -e 's/password: \"//' -e 's/\"//'")
 
 -- Use universal access to enter the text and to click the button
-tell application "System Events"
-	repeat
-		if (do shell script "stat -f %Su /dev/console") is username then exit repeat
-		
-		-- Get the password for the username
-		try
-			set pswd to (do shell script "security find-generic-password -g -s \"" & username & "\" -D \"User Login\" 2>&1 1>/dev/null | sed -e 's/password: \"//' -e 's/\"//'")
-		on error
-			exit repeat
-		end try
-		
-		if exists window 1 of application process "SecurityAgent" then
-			tell process "SecurityAgent" to set value of text field 1 of window 1 to pswd
-			key code 36
-			exit repeat
-		else
-			tell application "SecurityAgent" to quit
-			do shell script "/System/Library/CoreServices/'Menu Extras'/User.menu/Contents/Resources/CGSession -switchToUserID `id -ur " & username & "`"
-		end if
-	end repeat
-end tell
+do shell script "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/Resources/CGSession -switchToUserID " & user_id
+repeat
+    try
+        tell application "System Events"
+            repeat until visible of process "SecurityAgent" is false
+                set visible of process "SecurityAgent" to false
+            end repeat
+            tell process "SecurityAgent" to set value of text field 1 of window 1 to pswd
+-           key code 36
+        end tell
+        exit repeat
+    on error
+        tell application "System Events"
+        end tell
+    end try
+end repeat
 
 on findReplace(findText, replaceText, sourceText)
 	set ASTID to AppleScript's text item delimiters
