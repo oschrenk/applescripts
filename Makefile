@@ -1,9 +1,11 @@
-all: clean mkdir eject_disk empty_trash lock_screen switch_to_user toggle_bluetooth
+all: clean mkdir clear_notfication eject_disk empty_trash lock_screen switch_to_user toggle_bluetooth
 
 clean:
 	rm -rf build
 mkdir:
 	mkdir build
+clear_notfication:
+	osacompile -o build/Clear\ Notifications.scpt scripts/Clear\ Notifications.applescript
 eject_disk:
 	osacompile -o build/Eject\ Disks.scpt scripts/Eject\ Disks.applescript
 empty_trash:
