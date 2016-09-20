@@ -10,7 +10,7 @@ set user_id       to do shell script "/usr/bin/id -u " & user_name
 set user_password to (do shell script "security find-generic-password -g -s \"" & user_name & "\" -D \"User Login\" 2>&1 1>/dev/null | sed -e 's/password: \"//' -e 's/\"//'")
 
 -- Use universal access to enter the text and to click the button
-do shell script "/System/Library/CoreServices/Menu\\ Extras/User.menu/Contents/Resources/CGSession -switchToUserID " & user_id
+do shell script "/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -switchToUserID " & user_id
 repeat
     try
         tell application "System Events"
