@@ -1,4 +1,4 @@
-property blueutilPath : "/usr/local/bin/blueutil power"
+property blueutilPath : "/usr/local/bin/blueutil -p"
 
 if execBlueutil("") ends with "0" then
 	-- Toggle BT on
